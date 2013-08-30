@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)alertButtonTapped:(UIButton *)sender {
+  NSLog(@"Alert Button Tapped");
+}
+
 @end

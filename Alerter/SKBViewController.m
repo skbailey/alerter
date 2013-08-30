@@ -29,6 +29,31 @@
 
 - (IBAction)alertButtonTapped:(UIButton *)sender {
   NSLog(@"Alert Button Tapped");
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alerts are great"
+                                                      message:@"They just are"
+                                                     delegate:self
+                                            cancelButtonTitle:@"No worries"
+                                            otherButtonTitles: @"Sure", nil];
+  
+  [alertView show];
+}
+
+#pragma mark UIAlertViewDelegate Methods -
+
+- (void)didPresentAlertView:(UIAlertView *)alertView {
+  NSLog(@"Alert View has been presented");
+}
+
+- (void)alertViewCancel:(UIAlertView *)alertView {
+  NSLog(@"Alert View has been canceled");
+}
+
+- (void) alertView:(UIAlertView*)alertView didDismissWithButtonIndex: (NSInteger)buttonIndex {
+  NSLog(@"A button has been tapped %ld", (long)buttonIndex);
+}
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView {
+  return NO;
 }
 
 @end

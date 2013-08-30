@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SKBViewController : UIViewController
+@interface SKBViewController : UIViewController <UIAlertViewDelegate>
 
 @end

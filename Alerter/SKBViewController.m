@@ -56,4 +56,10 @@
   return NO;
 }
 
+#pragma mark First Responder -
+
+- (void)buttonPressed:(id)sender {
+  NSLog(@"Acting as first responder");
+}
+
 @end
